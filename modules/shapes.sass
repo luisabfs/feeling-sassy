@@ -1,0 +1,24 @@
+//variables
+$brand-main:    #6600cc
+$brand-sub:     #cc66ff
+$brand-dark:    #333333
+$brand-light:   #e6f2ff
+    
+//mixins
+=shaping($height, $width, $rad, $bg, $color)
+    height:                 $height
+    width:                  $width
+    -webkit-border-radius:  $rad
+    -moz-border-radius:     $rad
+    -ms-border-radius:      $rad
+    border-radius:          $rad
+    background-color:       $bg
+    color:                  $color
+
+.thumb1
+    +shaping(120px, 120px, 10%, $brand-dark, $brand-light)
+    margin: 0 85px -90px
+
+.thumb2
+    +shaping(100px, 100px, 50%, $brand-sub, $brand-sub)
+    margin: -50px 970px

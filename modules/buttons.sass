@@ -1,0 +1,29 @@
+//variables
+$brand-main:    #6600cc
+$brand-sub:     #cc66ff
+$brand-dark:    #333333
+$brand-light:   #e6f2ff
+
+//mixins
+=btn-main($padding, $rad, $bg, $color)
+    padding:               $padding
+    border-radius:         $rad
+    background-color:      $bg
+    color:                 $color
+    border-width: 0
+    border-style: none
+    cursor: pointer
+    display: block
+    margin: auto
+    &:hover
+        background-color: lighten($brand-main, 20%)
+
+
+.btn-1
+    +btn-main(15px 20px, 7px, $brand-main, white)
+
+.btn-2
+    +btn-main(30px, 50%, $brand-dark, white)
+    font-size: 2rem
+    &:hover
+        background-color: darken($brand-main, 10%)
